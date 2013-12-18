@@ -28,7 +28,7 @@ class LogInOrCreateAccountPage(BasePage):
     _new_user_created_message = (By.ID, 'page-title')
     _new_user_welcome_message = (By.CSS_SELECTOR, 'h2 .mw-headline')
 
-    def log_in(self, user='asilnithanya'):
+    def log_in(self, user='default'):
         credentials = self.testsetup.credentials[user]
         self.type_username(credentials['username'])
         self.type_password(credentials['password'])
